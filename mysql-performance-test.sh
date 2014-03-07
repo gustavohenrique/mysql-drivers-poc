@@ -1,0 +1,1 @@
+mysql -u root -proot -D smartia -e "SELECT cotacao.id FROM Pedido pedido FORCE INDEX (IDX_SMARTIA_BI) JOIN Cotacao cotacao ON cotacao.pedidoOrigem_id = pedido.id JOIN ResultadoCotacao resultado ON resultado.cotacao_id = cotacao.id WHERE NOT EXISTS (SELECT id FROM CotacaoAnalisada analisada WHERE analisada.id = cotacao.id) AND pedido.tipoCriador = 'INTERNET'"
