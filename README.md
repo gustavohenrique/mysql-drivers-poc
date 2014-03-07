@@ -19,3 +19,8 @@ mysql-performance-test
     ./c/compile.sh
     time c/mysql-performance-time
 
+# Javascript (nodejs)
+
+    ./javascript/install.sh
+    time nodejs javascript/mysql-performance-test.js
+

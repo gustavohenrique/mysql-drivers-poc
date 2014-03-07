@@ -1,3 +1,4 @@
 target
+node_modules
 *.pyc
 c/mysql-performance-test
